@@ -23,7 +23,9 @@ Once you are in game, simply type "status" in the TF2 Console, which will, among
 
 The Python code will scan the TF2 log file for the latest instance of "# userid", which is the header above the SteamID's.
 There are some instances when a Steam ID will appear above that header and you will see that in the Console. If that occurs the code will miss checking the Steam IDs above.
-The fix that simply type "status" again until all the Steam ID's are below the header.
+There are other instances where other text will be after the "# userid" that does not start with a "#" which is used to filter the Steam ID's.
+The code could be fixed up to deal with this, but I just haven't got around to it.
+In the mean time the simple fix is to type "status" again until all the Steam ID's are below the header without any other random extras.
 
 Once you have done that the code will automatically extract all the Steam IDs from the log file and check them all against the Megascatterbomb database.
 It does this by entering the Stead ID into the search box on the webpage and checks the text colours that are returned. If they are Red or Yellow a warning sound happens and the name of the cheating player is displayed. You will hear the warning sound while you are playing TF2.
