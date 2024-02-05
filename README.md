@@ -1,7 +1,10 @@
 This code it to detect cheaters in TF2 from the cheat database created by Megascatterbomb (https://megascatterbomb.com/mcd). 
 Megascatterbomb gives a good description of the purpose behind the database on these Youtube videos:- 
+
 https://www.youtube.com/watch?v=LVgk5t64cRs
+
 https://www.youtube.com/@megascatterbomb
+
 https://www.youtube.com/watch?v=ARN5PtTKbtg
 
 Ensure you modify the following line ion the code to correctly aim at the TF2 folder that contains your TF2 log file:-
