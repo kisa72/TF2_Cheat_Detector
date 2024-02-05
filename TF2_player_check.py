@@ -46,6 +46,8 @@ while True:
                 print("FAILED")
                 print("start: {0}".format(start))
                 print("lines: {0}".format(len(lines)))
+                start -= 1
+                
 
         start -= 1
     for x in keep_line:
