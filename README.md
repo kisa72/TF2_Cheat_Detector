@@ -8,8 +8,9 @@ https://www.youtube.com/@megascatterbomb
 https://www.youtube.com/watch?v=ARN5PtTKbtg
 
 Ensure you modify the following line ion the code to correctly aim at the TF2 folder that contains your TF2 log file:-
+```
 file = open("F:\/Steam\/steamapps\/common\/Team Fortress 2\/tf\/name.log", mode = 'r', encoding = 'utf-8-sig')
-
+```
 Note: you will need to create the log file via the TF2 Console. Explained further down.
 
 You can start the Python code at any time and it will run until stopped.
