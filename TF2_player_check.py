@@ -1,7 +1,7 @@
 # In TF2 Console:-
 # Ensure you have created a Console log file and activate it each time you open TF2.
 # Using the following line in TF2 Console:-
-# con_logfile "name.log"
+# con_logfile "console.log"
 # Every time you want to check players type "status" in Console.
 import requests
 from bs4 import BeautifulSoup
@@ -22,7 +22,7 @@ import ntpath
 
 
 # set the following address to where your TF2 log file is located FOR ME
-#TF2_log_file_location = "F:\Steam\steamapps\common\Team Fortress 2\tf\name.log"
+#TF2_log_file_location = "F:\Steam\steamapps\common\Team Fortress 2\tf\console.log"
 
 # Filename if file containing TF2 log file location
 log_location_filename = "log_file_path.txt"
@@ -32,7 +32,7 @@ cwd = os.getcwd()
 
 
 def check_log_file_location_exists():
-    # checks if file containing the TF2 log file location exists.
+    # Checks if file containing the TF2 log file location exists.
     # This removes the need to reenter the location if it does.
     if os.path.isfile(log_location_filename):
         print("Log file location exists")
@@ -43,9 +43,9 @@ def check_log_file_location_exists():
 
 def request_log_file_location():
     print('Input the location of the TF2 log file')
-    path = input('Leave blank to use dafault: "C:\\program files\\Steam\\steamapps\\common\\Team Fortress 2\\tf\\name.log"?')
+    path = input('Leave blank to use dafault: "C:\\program files\\Steam\\steamapps\\common\\Team Fortress 2\\tf\\console.log"?')
     if not path:
-        path = "C:\program files\Steam\steamapps\common\Team Fortress 2\tf\name.log"
+        path = "C:\program files\Steam\steamapps\common\Team Fortress 2\tf\console.log"
     return path
 
 
@@ -71,7 +71,7 @@ def get_TF2_log_file_details(TF2_log_file_address):
     try:
         file = open(TF2_log_file_address, mode = 'r', encoding = 'utf-8-sig')
     except:
-        sys.exit('TF2 log file does not exist.\nEnsure the file was created in TF2 via the Console with the following command:-\ncon_logfile "name.log"\nOtherwise ensure the path set fo TF2_log_file_location points to the correct location.')
+        sys.exit("Can't find TF2 log file.\nEnsure the file was created in TF2 via the Console with the following command:-\ncon_logfile \"console.log\"\nOtherwise ensure the path set in log_file_path.txt points to the correct location.")
         return 0, 0          
     log_file_lines = file.readlines()
     num_lines = len(log_file_lines)
