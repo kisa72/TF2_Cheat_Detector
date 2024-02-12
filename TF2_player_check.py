@@ -71,7 +71,7 @@ def get_TF2_log_file_details(TF2_log_file_address):
     try:
         file = open(TF2_log_file_address, mode = 'r', encoding = 'utf-8-sig')
     except:
-        sys.exit("Can't find TF2 log file.\nEnsure the file was created in TF2 via the Console with the following command:-\ncon_logfile \"console.log\"\nOtherwise ensure the path set in log_file_path.txt points to the correct location.")
+        sys.exit("Can't find TF2 log file - {0}.\nEnsure the file was created in TF2 via the Console with the following command:-\ncon_logfile \"console.log\"\nOtherwise ensure the path set in log_file_path.txt points to the correct location.".format(TF2_log_file_address))
         return 0, 0          
     log_file_lines = file.readlines()
     num_lines = len(log_file_lines)
