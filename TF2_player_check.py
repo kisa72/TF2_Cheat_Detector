@@ -175,12 +175,12 @@ def main():
         # in-game name (as they sometime differ from the database
         new_player_steam_ids = parse_out_details(extracted_lines)
 
-        # check if the list of player steam id's has changed if it has check the new list 
+        # check if the list of player steam id's has changed if it has check the new list       
         if new_player_steam_ids != player_steam_ids:
             player_steam_ids = new_player_steam_ids
 
             # add in the following line to test detecting a cheat
-            player_steam_ids["[U:1:891772657]"] = ['"DoesBotter"']
+            #player_steam_ids["[U:1:891772657]"] = ['"DoesBotter"']
             
             print(player_steam_ids)
             # set up headless browser access
