@@ -8,7 +8,7 @@ https://www.youtube.com/@megascatterbomb
 
 https://www.youtube.com/watch?v=ARN5PtTKbtg
 
-Before running the program for the first time ensure you have first created a TF2 log file by running TF2 and entering the following command in Console (you enter Console by hitting 'esc' while in TF2 and then pressing '~'):-
+Before running the program for the first time ensure you have first created a TF2 log file by **joining a game of TF2** and entering the following command in Console (you enter Console by hitting 'esc' while in TF2 and then pressing '~'):-
 ```
 con_logfile "console.log"
 ```
