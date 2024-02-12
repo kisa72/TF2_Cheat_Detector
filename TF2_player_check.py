@@ -51,12 +51,12 @@ def request_log_file_location():
 
 def save_log_location_path(log_location):
     try:
-        print("Creating file containing TF2 log file location")
         # create new file to store log file directory path   
         f= open(cwd + "\/" + log_location_filename,"w+")
         # save log directory path in file
         f.write(log_location)        
         f.close()
+        print("File containing TF2 log file location created in:- {0}".format(log_location))
     except:
         print("Could not create file.")
 
@@ -71,8 +71,12 @@ def get_TF2_log_file_details(TF2_log_file_address):
     try:
         file = open(TF2_log_file_address, mode = 'r', encoding = 'utf-8-sig')
     except:
-        sys.exit("Can't find TF2 log file - {0}.\nEnsure the file was created in TF2 via the Console with the following command:-\ncon_logfile \"console.log\"\nOtherwise ensure the path set in log_file_path.txt points to the correct location.".format(TF2_log_file_address))
-        return 0, 0          
+        print("Can't find TF2 log file - {0}".format(TF2_log_file_address))
+        print('Ensure the file was created in TF2 via the Console with the following command:-\ncon_logfile \"console.log\"')
+        print("Otherwise ensure the path set in log_file_path.txt points to the correct location.")
+        time.sleep(20)
+        sys.exit()
+        
     log_file_lines = file.readlines()
     num_lines = len(log_file_lines)
     start = num_lines - 1
