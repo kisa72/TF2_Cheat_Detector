@@ -28,7 +28,7 @@ After creating the log file you can start the program at any time.
 ## How to use the program to check players
 
 Although the log file has been created, you still need to let TF2 know to send Console information to it each time you restart TF2.
-To do theis simply run the followjng in Console:-
+To do this simply run the followjng in Console:-
 ```
 con_logfile "console.log"
 ```
