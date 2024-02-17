@@ -48,3 +48,10 @@ This is aimed at checking Casual servers so there is no way I know of to get tha
 The code is not the best and it's something I whipped up reasonable quickly. I've managed to catch cheaters with it already so it does work, but those of you with good coding skills, feel free to improve on what I've done.
 
 Thanks and enjoy catching those bastards.
+
+## How to create your own .exe
+
+If you want to create your own exe as opposed to using the one I've provided follow the steps in the YouTube video below.
+
+https://www.youtube.com/watch?v=xJAM8_Lx5mY
+
