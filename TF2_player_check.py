@@ -69,7 +69,7 @@ def get_TF2_log_file_address():
     
 def get_TF2_log_file_details(TF2_log_file_address):
     try:
-        file = open(TF2_log_file_address, mode = 'r', encoding = 'utf-8-sig')
+        file = open(TF2_log_file_address, mode = 'r', encoding = 'latin-1')
     except:
         print("Can't find TF2 log file - {0}".format(TF2_log_file_address))
         print('Ensure the file was created in TF2 via the Console with the following command:-\ncon_logfile \"console.log\"')
